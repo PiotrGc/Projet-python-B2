@@ -24,5 +24,15 @@ def icon_of_code(code):
 
 def time_of_day():
     """Renvoie "day" ou "night" en fonction de l'heure de la journée"""
-    # TODO
-    pass
+    hour = datetime.now().hour
+    if 7 <= hour < 20:
+        return "day"
+    return "night"
+
+def night_icon(icon):
+    """Remplace les icônes avec un soleil par leur version de nuit."""
+    if icon == "sunny":
+        return "night"
+    if icon == "partly_cloudy_day":
+        return "partly_cloudy_night"
+    return icon

@@ -18,3 +18,7 @@ CITIES = {
 WIDTH = 400
 HEIGHT = 500
 URL_API = "https://api.open-meteo.com/v1/forecast"
+
+# Limites de l'API Open-Meteo (endpoint "forecast") pour start_date / end_date
+MAX_PAST_DAYS = 92
+MAX_FUTURE_DAYS = 15

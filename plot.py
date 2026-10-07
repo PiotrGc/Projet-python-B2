@@ -11,10 +11,13 @@ def create_plot(dates, temperatures_min, temperatures_max):
 
     ######################################
 
-    # TODO
-    # axes.plot(...)
-
-
+    x = range(len(dates))
+    axes.plot(x, temperatures_max, color = "tab:red", marker = "o", label = "Max")
+    axes.plot(x, temperatures_min, color = "tab:blue", marker = "o", label = "Min")
+    axes.fill_between(x, temperatures_min, temperatures_max, color = "orange", alpha = 0.15)
+    axes.set_ylabel("Température (°C)")
+    axes.grid(True, alpha = 0.3)
+    axes.legend(fontsize = 8)
 
     ######################################
 

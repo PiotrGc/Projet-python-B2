@@ -17,9 +17,16 @@ canvas = None
 def main():
     global window, canvas
 
-    # TODO
+    window = tk.Tk()
+    window.title("Application météo")
+    window.resizable(False, False)
 
-    # ...
+    canvas = tk.Canvas(window, width = WIDTH, height = HEIGHT, highlightthickness = 0)
+    canvas.pack()
+
+    load_background(canvas)
+    draw_welcome_screen(window, canvas)
+    window.mainloop()
 
 
 if __name__ == "__main__":
